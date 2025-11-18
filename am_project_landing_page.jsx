@@ -1,0 +1,188 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function AMLanding() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      <header className="bg-white shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-600 to-teal-400 flex items-center justify-center text-white font-bold">AM</div>
+            <div>
+              <h1 className="text-lg font-semibold">AM</h1>
+              <p className="text-xs text-gray-500">Games • Education • Apps • Operating System • Tablets</p>
+            </div>
+          </div>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#products" className="hover:underline">Products</a>
+            <a href="#os" className="hover:underline">AM OS</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+            <a href="#newsletter" className="px-4 py-2 rounded-md bg-indigo-600 text-white">Join Beta</a>
+          </nav>
+        </div>
+      </header>
+
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl sm:text-5xl font-extrabold leading-tight"
+            >
+              AM — a platform for playful learning, creative apps, and a fresh OS.
+            </motion.h2>
+            <p className="mt-4 text-gray-600 text-lg">We build vibrant games, educational apps, productivity tools — and an operating system designed for tablet-first experiences. Join our community to test early releases, follow progress, and help shape AM.</p>
+
+            <div className="mt-6 flex gap-3">
+              <a href="#products" className="px-5 py-3 rounded-md border border-indigo-600 text-indigo-600 font-medium">See products</a>
+              <a href="#newsletter" className="px-5 py-3 rounded-md bg-indigo-600 text-white font-medium">Join beta</a>
+            </div>
+
+            <ul className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-600">
+              <li className="py-2">✓ Games for every age</li>
+              <li className="py-2">✓ Curriculum-aligned edu apps</li>
+              <li className="py-2">✓ Productivity & creativity apps</li>
+              <li className="py-2">✓ AM OS — tablet-optimized</li>
+            </ul>
+          </div>
+
+          <div className="relative">
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-xl p-6"
+            >
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div className="h-28 rounded-lg bg-gradient-to-br from-indigo-200 to-indigo-400 flex items-center justify-center text-white font-semibold">Game — Flow</div>
+                  <p className="text-sm text-gray-500">An adaptive puzzle-platformer that teaches problem solving.</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="h-28 rounded-lg bg-gradient-to-br from-teal-200 to-teal-400 flex items-center justify-center text-white font-semibold">Learn — Kids</div>
+                  <p className="text-sm text-gray-500">Interactive lessons and mini-games aligned with common curricula.</p>
+                </div>
+                <div className="col-span-2 mt-2">
+                  <div className="h-40 rounded-lg bg-gray-100 flex items-center justify-center text-gray-400">Tablet mockup / OS preview</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="absolute -right-6 -bottom-6 w-48 h-48 rounded-xl bg-gradient-to-br from-yellow-200 to-pink-200 opacity-60 blur-3xl" aria-hidden />
+          </div>
+        </section>
+
+        <section id="about" className="mt-16 bg-white rounded-2xl p-8 shadow-sm">
+          <h3 className="text-2xl font-semibold">About AM</h3>
+          <p className="mt-3 text-gray-600">AM is a multi-part project building delightful apps, learning experiences, games, and a custom operating system focused on tablet devices. Our goals are simple: make software that feels safe, playful, and useful — whether that's teaching a child arithmetic, helping a creator sketch ideas, or powering a new family tablet running AM OS.</p>
+
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold">Mission</h4>
+              <p className="text-sm text-gray-500 mt-2">Empower curious learners and makers across ages with accessible, beautiful software.</p>
+            </div>
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold">Values</h4>
+              <p className="text-sm text-gray-500 mt-2">Privacy-first, playful, inclusive, and performance-conscious.</p>
+            </div>
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold">Hardware</h4>
+              <p className="text-sm text-gray-500 mt-2">We design tablets to showcase AM OS but keep the ecosystem open: AM runs well on a variety of modern ARM-based tablets.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="products" className="mt-10">
+          <h3 className="text-2xl font-semibold">Products</h3>
+          <p className="text-gray-600 mt-2">A snapshot of what we're building now.</p>
+
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card title="Games" desc="Casual to deep games that teach, entertain, and spark curiosity." />
+            <Card title="Education Apps" desc="Adaptive learning paths, teacher tools, and classroom-friendly features." />
+            <Card title="Creator & Productivity Apps" desc="Drawing, note-taking, and lightweight productivity tailored for touch." />
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 border rounded-lg bg-white">
+              <h4 className="font-semibold">AM OS</h4>
+              <p className="text-gray-600 mt-2">AM OS is being developed as a tablet-optimized operating system focused on smooth animations, battery life, and privacy. It doesn't require proprietary hardware — we'll ship a reference tablet and work with partners to certify compatible devices.</p>
+              <ul className="mt-4 text-sm text-gray-600 space-y-2">
+                <li>• Modular architecture</li>
+                <li>• App sandboxing & permission control</li>
+                <li>• Touch-first UI and multi-user support</li>
+              </ul>
+            </div>
+
+            <div className="p-6 border rounded-lg bg-white">
+              <h4 className="font-semibold">Tablets</h4>
+              <p className="text-gray-600 mt-2">We design and prototype tablets to showcase AM OS. These tablets prioritize durability, battery life, and an accessible price point for families and schools.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="roadmap" className="mt-10 bg-white p-6 rounded-lg shadow-sm">
+          <h3 className="text-2xl font-semibold">Roadmap</h3>
+          <ol className="mt-4 space-y-3 text-gray-600">
+            <li>• Alpha: internal testing of core OS + first games (in progress)</li>
+            <li>• Beta: open beta for educators & families (next)</li>
+            <li>• 1.0: official OS launch and tablet availability</li>
+          </ol>
+        </section>
+
+        <section id="newsletter" className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="md:col-span-2 bg-gradient-to-r from-indigo-600 to-teal-400 text-white p-6 rounded-lg">
+            <h4 className="text-xl font-semibold">Want early access?</h4>
+            <p className="mt-2 text-sm">Join our mailing list for beta invites, dev updates, and exclusive previews.</p>
+
+            <form className="mt-4 flex gap-3 max-w-md">
+              <input aria-label="email" placeholder="Your email" className="flex-1 rounded-md p-3 text-gray-800" />
+              <button type="submit" className="px-4 py-3 rounded-md bg-white text-indigo-600 font-semibold">Join</button>
+            </form>
+          </div>
+
+          <div className="p-6 border rounded-lg">
+            <h4 className="font-semibold">Contact</h4>
+            <p className="text-sm text-gray-600 mt-2">Email: <span className="font-mono">hello@am.example</span></p>
+            <p className="text-sm text-gray-600 mt-1">Twitter: <span className="font-mono">@am_project</span></p>
+          </div>
+        </section>
+
+        <section id="contact" className="mt-10 mb-12">
+          <div className="p-6 border rounded-lg bg-white">
+            <h4 className="font-semibold">Get involved</h4>
+            <p className="mt-2 text-gray-600">We welcome contributors, testers, and educators. If you want to try AM OS on a tablet, collaborate on curriculum content, or help test, reach out.</p>
+            <div className="mt-4 flex gap-3">
+              <a href="#newsletter" className="px-4 py-3 rounded-md bg-indigo-600 text-white">Join beta</a>
+              <a href="#contact" className="px-4 py-3 rounded-md border">Contact us</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-white border-t py-6">
+        <div className="max-w-6xl mx-auto px-6 text-sm text-gray-500 flex items-center justify-between">
+          <p>© AM — Built with care.</p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:underline">Privacy</a>
+            <a href="#" className="hover:underline">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+function Card({ title, desc }) {
+  return (
+    <div className="p-6 border rounded-lg bg-white">
+      <h4 className="font-semibold">{title}</h4>
+      <p className="text-sm text-gray-600 mt-2">{desc}</p>
+      <div className="mt-4">
+        <a className="text-indigo-600 text-sm font-medium">Learn more →</a>
+      </div>
+    </div>
+  );
+}
